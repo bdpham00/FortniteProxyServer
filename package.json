@@ -1,0 +1,28 @@
+{
+  "name": "fortniteproxyserver",
+  "version": "1.0.0",
+  "description": "Proxy server for Fortnite API Calls",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bdpham00/FortniteProxyServer.git"
+  },
+  "keywords": [
+    "fortnite",
+    "proxy",
+    "server"
+  ],
+  "author": "Bao Pham",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bdpham00/FortniteProxyServer/issues"
+  },
+  "homepage": "https://github.com/bdpham00/FortniteProxyServer#readme",
+  "dependencies": {
+    "node-rest-client": "^3.1.0"
+  }
+}
