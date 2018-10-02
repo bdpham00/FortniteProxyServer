@@ -6,8 +6,9 @@ var appRouter = function (app) {
     });
 
     app.get("/GetFortnitePlayerStats", function (req, res) {
-        var data = service.getFortniteData();
-        res.status(200).send({"test": [1,2,3,4]});
+        service.getFortniteData(function(data) {          
+          res.status(200).send(data);
+        });
       });
   }
   

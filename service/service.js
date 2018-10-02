@@ -2,7 +2,7 @@ var Client = require('node-rest-client').Client;
 
 var client = new Client();
 
-exports.getFortniteData = function() {
+exports.getFortniteData = function(cb) {
     var json = {};
     //Set Fortnite Header
     var args = {
@@ -12,7 +12,6 @@ exports.getFortniteData = function() {
     client.get("https://api.fortnitetracker.com/v1/profile/pc/imstillyoung", args, function (data, response) {
         // parsed response body as js object
         json = data;
-
-        return json;
-    });
+        cb(json);
+    });    
 }
