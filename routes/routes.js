@@ -11,8 +11,13 @@ var appRouter = function (app) {
       res.status(200).send("Welcome to our restful API");
     });
 
-    app.get("/GetFortnitePlayerStats", function (req, res) {
-        service.getFortniteData(function(data) {          
+    app.get("/GetFortnitePlayerStats/:platform/:username", function (req, res) {
+      var params = {
+        "platform": req.params.platform,
+        "username": req.params.username
+      }
+
+        service.getFortniteData(params, function(data) {          
           res.status(200).send(data);
         });
       });
