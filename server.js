@@ -1,4 +1,3 @@
-var service = require('./service/service');
 var express = require("express");
 var bodyParser = require("body-parser");
 var routes = require("./routes/routes.js");
