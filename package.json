@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/bdpham00/FortniteProxyServer#readme",
   "dependencies": {
+    "express": "^4.16.3",
     "node-rest-client": "^3.1.0"
   }
 }
