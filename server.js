@@ -1,9 +1,15 @@
-var http = require('http');
 var service = require('./service/service');
+var express = require("express");
+var bodyParser = require("body-parser");
+var routes = require("./routes/routes.js");
+var app = express();
 
-http.createServer(function (req, res) {
-    res.writeHead(200, {'Content-Type': 'text/html'});
-    res.end('Hello World!');
-}).listen(8080);
+//Tells Express to use json and url-encoded values
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
-service.getFortniteData(); 
+routes(app);
+
+var server = app.listen(3000, function () {
+    console.log("app running on port.", server.address().port);
+});
